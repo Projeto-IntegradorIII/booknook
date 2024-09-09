@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AR:wght@100..400&display=swap');
+
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+  }
+  
+  .login-form-container {
+    background: white;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    box-sizing: border-box;
+  }
+  
+  .login-form-group {
+    margin-bottom: 1rem;
+  }
+  .login-form-group h1{
+    font-family: "Playwrite AR", cursive;
+    font-optical-sizing: auto;
+    color: purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-form-group label {
+    display: block;
+    margin: 0.5rem 0;
+    font-weight: bold;
+  }
+  
+  .login-form-group input {
+    width: 100%;
+    padding: 0.9rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .login-button {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    background-color: purple;
+    color: white;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #b300a1;
+  }
+  
+  /* Estilos responsivos */
+  @media (max-width: 600px) {
+    .login-form-container {
+      padding: 1rem;
+    }
+  
+    .login-form-group input {
+      padding: 0.5rem;
+    }
+  
+    .login-button {
+      padding: 0.5rem;
+    }
+  }
+  

@@ -1,0 +1,20 @@
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0px;
+}
+  
+.carousel-item {
+  max-width: 80%;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+  

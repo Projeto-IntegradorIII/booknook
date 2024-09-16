@@ -15,8 +15,6 @@ function Login() {
     .then(response=>{
       if(response.data.valid){
         navigate('/')
-      }else{
-        navigate('/cadastro')
       }
       console.log(response)
     })
@@ -24,7 +22,6 @@ function Login() {
   },[])
 
   function handleSubmit(event){
-
     event.preventDefault()
     axios.post('http://localhost:8082/login', {email, password})
     .then((response) => {

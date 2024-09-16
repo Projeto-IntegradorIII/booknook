@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+AR:wght@100..400&display=swap');
 
 .body #divMain {
-  max-height: 80px;
+  max-height: 90px;
   padding: 10px;
   max-width: 100%;
   font-family: "Inter", sans-serif;
@@ -31,6 +31,7 @@
   height: auto;
   margin-right: auto;
   margin-left: 10%;
+  
 }
 
 .body .cabecario > * {
@@ -71,17 +72,17 @@ a:hover {
 }
 
 #button-vendaJa {
-  border: 2px solid  #5CD4B4;
-  padding: 12px;
-  border-radius: 37px;
-  color: white;
-  background-color: #5CD4B4;
-  box-shadow: 1px 4px 2px rgb(84, 84, 84);
- 
-}
-
-#button-vendaJa:hover {
-  transition: 1s;
-  box-shadow: 1px 5px 3px rgb(84, 84, 84);
+    border: 2px solid #5CD4B4;
+    padding: 12px;
+    border-radius: 37px;
+    color: white;
+    background-color: #5CD4B4;
+    box-shadow: 1px 1px 2px rgb(84, 84, 84);
+    transition: all 0.3s ease; 
+  }
   
-}
+  #button-vendaJa:hover {
+    box-shadow: 1px 2px 3px rgb(84, 84, 84); 
+    transform: scale(1.05);
+  }
+  

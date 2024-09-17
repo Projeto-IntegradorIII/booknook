@@ -110,9 +110,8 @@ export default function CadastroLivros() {
           <div>
             <label htmlFor="imagem">Imagem</label>
             <input
-              type="file"
-              accept="image/*"
-              placeholder="Selecione a capa"
+              type="text"
+              placeholder="Insira o link da foto"
               onChange={(e) => setImagem(e.target.value)}
             />
           </div>

@@ -12,7 +12,7 @@ import Menu from '../components/Menu';
     const [telefone, setTelefone] = useState('')
     const [password, setPassword] = useState('')
     const [livros, setLivros] = useState([])
-    
+    const [imagem, setImagem] = useState(null);
 
     const navigate = useNavigate()
     axios.defaults.withCredentials = true;

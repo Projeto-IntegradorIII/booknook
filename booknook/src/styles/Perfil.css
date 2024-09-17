@@ -120,7 +120,7 @@ body {
     text-align: center;
     border-radius: 20px;
     cursor: pointer;
-    padding: 10px; /* Ajusta o espaçamento interno de todo o item */
+    padding: 10px; /* Ajusta o espaçamento interno de todo o item  VOOHOIHOIH*/
     box-shadow: 0 1px 15px rgb(173, 173, 173);
     transition: 0.4s;
     background: #f2f2f2;
@@ -133,7 +133,7 @@ body {
   
 
   .seuslivros .listalivros p {
-    margin-bottom:5px;
+    margin-bottom:500px; /*TESTE*/
   }
   
   .seuslivros .bntexcluir {

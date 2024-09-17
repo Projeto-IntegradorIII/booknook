@@ -189,18 +189,23 @@ app.get('/meus-livros', (require, response) => {
     return response.json({ valid: false, message: 'Usuário não autenticado' });
   }
 });
+app.delete('/apagar-livro', (request, response) => {
+  const sql = 'DELETE FROM livros WHERE isbn = ?';
+  
+  db.query(sql, [request.body.isbn], (err, data) => {
+    if (err) {
+      console.error('Erro ao excluir o livro:', err);
+      return response.status(500).json({ valid: false, message: 'Erro ao excluir o livro' });
+    }
 
-app.delete('/apagar-livro', (require, response) =>{
-    const sql = 'DELETE from livros WHERE isbn = ?';
-    db.query(sql,[
-      require.body.isbn
-    ], (err, results)=>{
-      if(err){
-        console.log('falha na exclusao')
-        return response.json({valid:true})
-      }
-    })
+    if (data.affectedRows > 0) {
+      return response.json({ valid: true, message: 'Livro excluído com sucesso' });
+    } else {
+      return response.status(404).json({ valid: false, message: 'Livro não encontrado' });
+    }
+  });
 });
+  
 
 app.listen(8082, ()=>{
     console.log("servidor conectado");

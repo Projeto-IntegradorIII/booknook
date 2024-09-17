@@ -61,13 +61,12 @@ import Menu from '../components/Menu';
     function excluirLivro(isbn){
       axios.defaults.withCredentials = true;
       axios
-          .delete("http://localhost:8082/apagar-livro", {isbn})
+          .delete("http://localhost:8082/apagar-livro", {data:{isbn}})
           .then((response)=>{
             if(response.data.valid){
               window.location.reload();
             }
           })
-
     }
 
     return (

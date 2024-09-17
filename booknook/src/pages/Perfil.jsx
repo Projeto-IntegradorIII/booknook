@@ -58,8 +58,15 @@ import Menu from '../components/Menu';
         .catch((err) => console.log(err));
     }
 
-    function excluirLivro(isnb){
-
+    function excluirLivro(isbn){
+      axios.defaults.withCredentials = true;
+      axios
+          .delete("http://localhost:8082/apagar-livro", {isbn})
+          .then((response)=>{
+            if(response.data.valid){
+              window.location.reload();
+            }
+          })
 
     }
 

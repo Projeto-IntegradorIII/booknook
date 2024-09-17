@@ -190,6 +190,17 @@ app.get('/meus-livros', (require, response) => {
   }
 });
 
+app.delete('/apagar-livro', (require, response) =>{
+    const sql = 'DELETE from livros WHERE isbn = ?';
+    db.query(sql,[
+      require.body.isbn
+    ], (err, results)=>{
+      if(err){
+        console.log('falha na exclusao')
+        return response.json({valid:true})
+      }
+    })
+});
 
 app.listen(8082, ()=>{
     console.log("servidor conectado");

@@ -132,15 +132,15 @@ body {
   
 
   .seuslivros .listalivros p {
-    margin-bottom:500px; /*TESTE*/
+    margin-bottom:10px; /*TESTE*/
   }
   
   .seuslivros .bntexcluir {
     background-color: #8A2BE2; 
     color: white; 
-    border: none; /* Remove a borda do botão */
-    padding: 8px 15px; /* Padding interno do botão */
-    border-radius: 30px; /* Bordas arredondadas */
+    border: none; 
+    padding: 8px 15px;
+    border-radius: 30px; 
   }
   
   .body .left-login {

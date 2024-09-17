@@ -6,3 +6,5 @@ Marco I - Requisitos e Padrão arquitetural
 
 Marco II - Framework de DW + Documento de Plano de Teste +
 Todas as funcionalidades implementadas
+
+Demais informações, consulte o Wiki :)

@@ -141,6 +141,7 @@ import Menu from '../components/Menu';
                   <p>Preço: {livro.preco}</p>
                   <p>Páginas: {livro.paginas}</p>
                   <p>Quantidade: {livro.quantidade}</p>
+                  <p>Capa: <img src={livro.imagem} alt="" /></p>
                 <p>  <button onClick={()=>excluirLivro(livro.isbn)} className='bntexcluir'>Excluir</button></p>
                 </li>
                 

@@ -45,14 +45,14 @@ db.connect((err) => {
     console.log('Conectado ao MySQL!');
   }
 });
+
 app.get('/livros', (req, res) => {
-  const sql = "SELECT * FROM livros";
+  const sql = "SELECT titulo, autor, editora, preco, paginas, quantidade, imagem FROM livros";
+  
   db.query(sql, [], (err, data) => {
     if (err) {
-      // Se houver um erro, responda com o código de status 400 e uma mensagem de erro
       return res.status(400).json({ message: 'Erro ao buscar livros', error: err });
     } else {
-      // Se não houver erro, responda com os dados dos livros e código de status 200
       return res.status(200).json(data);
     }
   });

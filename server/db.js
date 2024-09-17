@@ -195,7 +195,7 @@ app.delete('/apagar-livro', (request, response) => {
   db.query(sql, [request.body.isbn], (err, data) => {
     if (err) {
       console.error('Erro ao excluir o livro:', err);
-      return response.status(500).json({ valid: false, message: 'Erro ao excluir o livro aqui' });
+      return response.status(500).json({ valid: false, message: 'Erro ao excluir o livro' });
     }
 
     if (data.affectedRows > 0) {

@@ -37,6 +37,14 @@ const db = mysql.createConnection({
   database: database
 });
 
+db.connect((err) => {
+  if (err) {
+    console.error('Erro ao conectar ao MySQL:', err);
+  } else {
+    console.log('Conectado ao MySQL!');
+  }
+});
+
 app.get('/', (require, response) =>{
     if(require.session.username){
         return response.json({valid:true, username: require.session.username})
@@ -172,8 +180,6 @@ app.get('/meus-livros', (require, response) => {
         console.error('Erro ao buscar livros:', err);
         return response.status(500).json({ valid: false, message: 'Erro ao buscar livros' });
       }
-
-      
       return response.json({
         valid: true,
         livros: results 

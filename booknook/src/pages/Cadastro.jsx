@@ -78,6 +78,9 @@ export default function Cadastro() {
           </div>
           <button className="login-button">Salvar</button>
         </form>
+        <a href='/login'>
+          Entre
+        </a>
       </div>
     </div>
   );

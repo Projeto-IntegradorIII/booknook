@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { redirect, useNavigate } from 'react-router-dom'
 import '../styles/Login.css'
 
 function Login() {
@@ -63,6 +63,9 @@ function Login() {
             Entrar
           </button> 
         </form>
+        <a href='/cadastro'>
+          Cadastre-se
+        </a>
       </div>
     </div>
   )

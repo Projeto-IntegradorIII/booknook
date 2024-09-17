@@ -69,24 +69,24 @@ import Menu from '../components/Menu';
           <div>
         <div >
           <form onSubmit={handleSubmit}>
-            <div >
-              <h1 id='titulo'>booknook de {nome}</h1>
+            <div className='body'>
+              <h1 id='titulo1'>Perfil de {nome}</h1>
 
-              <label htmlFor="nome">Nome</label>
+              <label htmlFor="nome" className='labelnome'>Nome</label>
               <input
                 type="name"
                 value={nome}
                 onChange={(e) => setNome(e.target.value)}
               />
 
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email" className='labelemail'>Email</label>
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
 
-              <label htmlFor="cpf">CPF</label>
+              <label htmlFor="cpf" className='labelcpf'>CPF</label>
               <input
                 type="text"
                 disabled="disable"
@@ -95,7 +95,7 @@ import Menu from '../components/Menu';
                 
               />
 
-              <label htmlFor="telefone">Telefone</label>
+              <label htmlFor="telefone" className='labeltel'>Telefone</label>
               <input
                 type="tel"
                 value={telefone}
@@ -104,8 +104,8 @@ import Menu from '../components/Menu';
               />
             </div>
 
-            <div >
-              <label htmlFor="password">Senha</label>
+            <div className='labelsenha'>
+              <label htmlFor="password" >Senha</label>
               <input
                 type="password"
                 placeholder="Insira sua nova senha"
@@ -113,15 +113,19 @@ import Menu from '../components/Menu';
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-            <button >Salvar</button>
+            <button className='bntperfil'>Salvar</button>
+
+            <div className="perfil-imagem">
+      <img src="https://static.vecteezy.com/ti/fotos-gratis/t2/22653879-fantasia-ilha-com-cachoeiras-3d-ilustracao-elementos-do-isto-imagem-mobiliado-de-nasa-generativo-ai-gratis-foto.jpg" alt="imagemperfil" />
+    </div>
           </form>
         </div>
-        <div>
-          <h1>Seus livros</h1>
+        <div className='seuslivros'>
+          <h1 id='titulo2'>Seus livros</h1>
           <ul>
             {livros.length > 0 ? (
               livros.map((livro, index) => (
-                <li key={index}>
+                <li key={index} className='listalivros'>
                   <h3>{livro.titulo}</h3>
                   <p>Autor: {livro.autor}</p>
                   <p>ISBN: {livro.isbn}</p>
@@ -129,8 +133,7 @@ import Menu from '../components/Menu';
                   <p>Preço: {livro.preco}</p>
                   <p>Páginas: {livro.paginas}</p>
                   <p>Quantidade: {livro.quantidade}</p>
-                   {livro.imagem && <img src={livro.imagem} alt={`Capa do livro ${livro.titulo}`} className="livro-capa" />}
-                  <button onClick={()=>excluirLivro(livro.isbn)}>Excluir</button>
+                <p>  <button onClick={()=>excluirLivro(livro.isbn)} className='bntexcluir'>Excluir</button></p>
                 </li>
                 
               ))

@@ -110,7 +110,6 @@ import Menu from '../components/Menu';
               />
 
 <div className="left-login">
-      <img src="https://static.vecteezy.com/ti/fotos-gratis/t2/22653879-fantasia-ilha-com-cachoeiras-3d-ilustracao-elementos-do-isto-imagem-mobiliado-de-nasa-generativo-ai-gratis-foto.jpg" alt="imagemperfil" />
     </div>
             </div>
 
@@ -128,6 +127,8 @@ import Menu from '../components/Menu';
             
           </form>
         </div>
+       
+
         <div className='seuslivros'>
           <h1 id='titulo2'>Seus livros</h1>
           <ul>
@@ -141,7 +142,8 @@ import Menu from '../components/Menu';
                   <p>Preço: {livro.preco}</p>
                   <p>Páginas: {livro.paginas}</p>
                   <p>Quantidade: {livro.quantidade}</p>
-                  <p>Capa: <img src={livro.imagem} alt="" /></p>
+                  <p>Capa: <img className="vetorImg" src={livro.imagem} alt="" /></p>
+                  
                 <p>  <button onClick={()=>excluirLivro(livro.isbn)} className='bntexcluir'>Excluir</button></p>
                 </li>
                 
@@ -150,7 +152,9 @@ import Menu from '../components/Menu';
               <p>Você ainda não cadastrou livros.</p>
             )}
           </ul>
+          
         </div>
+        
       </div>
       </div>
     );

@@ -6,7 +6,7 @@ body {
 
 
 .body #titulo1 {
-    margin-top: 50px;
+    margin-top: 500px;
     margin-left: 200px;
 }
 
@@ -17,7 +17,6 @@ body {
     margin-top: 10px;
 
 }
-
 
 
 .body .labelemail {
@@ -67,7 +66,7 @@ body {
 }
 
 .bntperfil {
-    background-color: #8A2BE2; 
+    background-color: #31e22b; 
     border: none; 
     color: white;
     padding: 10px 28px; 
@@ -89,7 +88,7 @@ body {
 
 .bntexcluir {
     
-    background-color: #8A2BE2; 
+    background-color: #f82626; 
     border: none; 
     color: white;
     padding: 10px 28px; 
@@ -120,10 +119,10 @@ body {
     text-align: center;
     border-radius: 20px;
     cursor: pointer;
-    padding: 10px; /* Ajusta o espaçamento interno de todo o item  VOOHOIHOIH*/
+    padding: 10px; 
     box-shadow: 0 1px 15px rgb(173, 173, 173);
     transition: 0.4s;
-    background: #f2f2f2;
+    background: #e03636;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -144,6 +143,10 @@ body {
     border-radius: 30px; /* Bordas arredondadas */
   }
   
+  .body .left-login {
+    margin-top: 100px;
+    margin-left: 100px;
+  }
 
 
   

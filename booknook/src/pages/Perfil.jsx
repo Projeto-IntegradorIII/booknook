@@ -108,6 +108,10 @@ import Menu from '../components/Menu';
                 
                 onChange={(e) => setTelefone(e.target.value)}
               />
+
+<div className="left-login">
+      <img src="https://static.vecteezy.com/ti/fotos-gratis/t2/22653879-fantasia-ilha-com-cachoeiras-3d-ilustracao-elementos-do-isto-imagem-mobiliado-de-nasa-generativo-ai-gratis-foto.jpg" alt="imagemperfil" />
+    </div>
             </div>
 
             <div className='labelsenha'>
@@ -121,9 +125,7 @@ import Menu from '../components/Menu';
             </div>
             <button className='bntperfil'>Salvar</button>
 
-            <div className="perfil-imagem">
-      <img src="https://static.vecteezy.com/ti/fotos-gratis/t2/22653879-fantasia-ilha-com-cachoeiras-3d-ilustracao-elementos-do-isto-imagem-mobiliado-de-nasa-generativo-ai-gratis-foto.jpg" alt="imagemperfil" />
-    </div>
+            
           </form>
         </div>
         <div className='seuslivros'>

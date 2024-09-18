@@ -46,7 +46,7 @@ function Menu() {
             <ul className="conjuntoLista">
               
               <a href="/" className="buttons">
-                <li className="lista"> Promoções</li>
+                <li className="lista">Home</li>
               </a>
               <a href="/perfil" className="buttons">
                 <li className="lista"> Perfil</li>

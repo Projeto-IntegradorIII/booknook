@@ -58,6 +58,27 @@ app.get('/livros', (req, res) => {
   });
 });
 
+app.get('/paginaLivro/:isbn', (req, res) => {
+  const isbn = req.params.isbn;
+
+  // Consulta SQL para buscar o livro pelo ISBN
+  const query = 'SELECT * FROM livros WHERE isbn = ?';
+
+  // Executa a consulta no banco de dados
+  db.query(query, [isbn], (err, results) => {
+      if (err) {
+          console.error('Erro ao buscar o livro:', err);
+          return res.status(500).send('Erro no servidor');
+      }
+
+      // Verifica se o livro foi encontrado
+      if (results.length > 0) {
+          res.json(results[0]);  // Retorna os dados do livro em formato JSON
+      } else {
+          res.status(404).send('Livro não encontrado');
+      }
+  });
+});
 
 app.get('/', (require, response) =>{
     if(require.session.username){

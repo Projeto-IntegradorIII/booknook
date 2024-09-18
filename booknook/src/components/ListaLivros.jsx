@@ -23,6 +23,12 @@ function ListaLivros() {
         setLivros([]);
       });
     }, []);
+
+    function paginaLivro(isbn) {
+      window.location.href = `http://localhost:8082/paginaLivro/${isbn}`;
+  }
+  
+
   return (
     <div className="lista-div">
       <h2 className="textoGrande">
@@ -39,7 +45,7 @@ function ListaLivros() {
                   <h3 id="titulo">{livro.titulo}</h3>
                   <p id="intrinseca">Intrínseca: {livro.editora}</p>
                   <p id="preco"> R$ {livro.preco} </p>
-                  <button className="button-Comprar">Comprar</button>
+                  <button className="button-Comprar" onClick={()=>paginaLivro(livro.isbn)}>Comprar</button>
                 </li>
               ))
             ) : (

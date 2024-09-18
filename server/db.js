@@ -47,7 +47,7 @@ db.connect((err) => {
 });
 
 app.get('/livros', (req, res) => {
-  const sql = "SELECT titulo, autor, editora, preco, paginas, quantidade, imagem FROM livros";
+  const sql = "SELECT titulo, autor, isbn, editora, preco, paginas, quantidade, imagem FROM livros";
   
   db.query(sql, [], (err, data) => {
     if (err) {

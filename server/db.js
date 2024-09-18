@@ -60,20 +60,14 @@ app.get('/livros', (req, res) => {
 
 app.get('/paginaLivro/:isbn', (req, res) => {
   const isbn = req.params.isbn;
-
-  // Consulta SQL para buscar o livro pelo ISBN
-  const query = 'SELECT * FROM livros WHERE isbn = ?';
-
-  // Executa a consulta no banco de dados
+  const query = 'SELECT titulo, autor, editora, preco, paginas, quantidade, imagem FROM livros WHERE isbn = ?';
   db.query(query, [isbn], (err, results) => {
       if (err) {
           console.error('Erro ao buscar o livro:', err);
           return res.status(500).send('Erro no servidor');
       }
-
-      // Verifica se o livro foi encontrado
       if (results.length > 0) {
-          res.json(results[0]);  // Retorna os dados do livro em formato JSON
+          res.json(results[0]); 
       } else {
           res.status(404).send('Livro não encontrado');
       }

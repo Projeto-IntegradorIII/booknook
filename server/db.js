@@ -83,19 +83,23 @@ app.get('/', (require, response) =>{
 })
 
 app.post('/cadastro', (request, response)=>{
-    const sql = "INSERT INTO usuario (nome, email, cpf, telefone, senha) VALUES (?, ?, ?, ?, ?);"
+    const sql = "INSERT INTO usuario (nome, email, cpf, telefone, senha, estado, cidade, rua, numero, bairro ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);"
     db.query(sql, [
       request.body.nome,
       request.body.email, 
       request.body.cpf,
       request.body.telefone,
-      request.body.password
+      request.body.password,
+      request.body.estado,
+      request.body.cidade,
+      request.body.rua,
+      request.body.numero, 
+      request.body.bairro
     ], (err, data)=>{
-      if(err) return response.json("erro");
-      if(data.length>0){
-        return response.json("Dados não inseridos")
+      if(err){ 
+        return response.json("erro");
       }else{
-        return response.json("ok")
+        return response.json({valid:true})
       } 
     })
   })

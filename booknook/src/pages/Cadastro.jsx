@@ -13,14 +13,20 @@ export default function Cadastro() {
   const [password, setPassword] = useState("");
   const [telefone, setTelefone] = useState("");
   const [cpf, setCpf] = useState("");
+  const [estado, setEstado] = useState("")
+  const [cidade, setCidade] = useState("")
+  const [rua, setRua] = useState("")
+  const [numero, setNumero] = useState("")
+  const [bairro, setBairro] = useState("")
 
   function handleSubmit(event) {
+    
     event.preventDefault();
+    axios.defaults.withCredentials = true;
     axios
-      .post("http://localhost:8082/cadastro", {nome, email , cpf, telefone, password })
+      .post("http://localhost:8082/cadastro", {nome, email , cpf, telefone, password, estado, cidade, rua, numero, bairro })
       .then((response) => {
-        console.log(response);
-        if(response.data === 'ok'){
+        if(response.data.valid){
             navigate('/login');
         }
     })
@@ -77,7 +83,54 @@ export default function Cadastro() {
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-
+          <h2>
+            Endereço
+          </h2>
+          <div className="login-form-group">
+            <label htmlFor="estado">Estado</label>
+            <input
+              type="text"
+              placeholder="Insira seu estado"
+              className="cadastro-input"
+              onChange={(e) => setEstado(e.target.value)}
+            />
+          </div>
+          <div className="login-form-group">
+            <label htmlFor="cidade">Cidade</label>
+            <input
+              type="text"
+              placeholder="Insira sua cidade"
+              className="cadastro-input"
+              onChange={(e) => setCidade(e.target.value)}
+            />
+          </div>
+          <div className="login-form-group">
+            <label htmlFor="rua">Rua</label>
+            <input
+              type="text"
+              placeholder="Insira sua rua"
+              className="cadastro-input"
+              onChange={(e) => setRua(e.target.value)}
+            />
+          </div>
+          <div className="login-form-group">
+            <label htmlFor="numero">Número</label>
+            <input
+              type="number"
+              placeholder="Insira seu número, caso tenha"
+              className="cadastro-input"
+              onChange={(e) => setNumero(e.target.value)}
+            />
+          </div>
+          <div className="login-form-group">
+            <label htmlFor="bairro">Bairro</label>
+            <input
+              type="text"
+              placeholder="Insira seu bairro"
+              className="cadastro-input"
+              onChange={(e) => setBairro(e.target.value)}
+            />
+          </div>
           <button className="login-button">Salvar</button>
       </form>
       <div className="inline-links">

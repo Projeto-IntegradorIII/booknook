@@ -16,7 +16,7 @@ function App() {
         <Route path='/perfil' element={<Perfil/>}/>
         <Route path='/' element={<Home/>}/> 
         <Route path='/cadastro-livros' element={<CadastroLivros/>}/> 
-        <Route path='/paginaLivro' element={<PaginaLivro/>}/>
+        <Route path='/paginaLivro/:isbn' element={<PaginaLivro/>}/>
       </Routes>
     </BrowserRouter>
   );

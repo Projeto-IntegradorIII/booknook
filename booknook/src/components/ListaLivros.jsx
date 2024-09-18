@@ -25,7 +25,7 @@ function ListaLivros() {
     }, []);
 
     function paginaLivro(isbn) {
-      window.location.href = `http://localhost:8082/paginaLivro/${isbn}`;
+      window.location.href = `http://localhost:3000/paginaLivro/${isbn}`;
   }
   
 

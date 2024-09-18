@@ -1,18 +1,16 @@
 import axios from 'axios';
 import React from 'react'
+import { useParams } from 'react-router-dom';
 
 export default function Livro() {
     
-const pathname = window.location.pathname;
-const isbn = pathname.split('/').pop();  
+const { isbn } = useParams();
+console.log(isbn)
 
 
-const queryParams = new URLSearchParams(window.location.search);
-const isbnQueryParam = queryParams.get('isbn'); 
-
-axios.get(`http://localhost:3000/paginaLivro/${isbn}`)
+axios.get(`http://localhost:8082/paginaLivro/${isbn}`)
   .then(response => {
-    console.log(response.data);
+    console.log(response.data)
   })
   .catch(error => {
     console.error("Erro ao buscar o livro:", error);
@@ -20,7 +18,9 @@ axios.get(`http://localhost:3000/paginaLivro/${isbn}`)
 
   return (
     <div>
-      
+      <h1>
+        {isbn}
+      </h1>
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
-import { useParams } from 'react-router-dom';
+import { Navigate, redirect, useNavigate, useParams } from 'react-router-dom';
 
 export default function Livro() {
 
@@ -11,6 +11,10 @@ export default function Livro() {
   const [paginas, setPaginas] = useState('')
   const [quantidade, setQuantidade] = useState('')
   const [imagem, setImagem] = useState('')
+  const [cpf_proprietario, setCpfProprietario] = useState('')
+  const [livros, setLivros] = useState([])
+  const navigate = useNavigate();
+
 
   axios.get(`http://localhost:8082/paginaLivro/${isbn}`)
     .then(response => {
@@ -22,11 +26,31 @@ export default function Livro() {
         setQuantidade(response.data.quantidade)
         setImagem(response.data.imagem)
       }
-
     })
     .catch(error => {
       console.error("Erro ao buscar o livro:", error);
     });
+
+function compra(){
+  axios.defaults.withCredentials = true;
+  axios.get('http://localhost:8082/')
+    .then(response=>{
+      if(response.data.valid){
+        setCpfProprietario(response.data.cpf)
+        axios.get('http://localhost:8082/meus-livros')
+          .then(response=>{
+            setLivros(response.data.livros || []) 
+              if(livros.length>0){
+                window.alert('Você é proprietário do livro')
+              }else{
+                navigate('/')
+              }
+          })
+      }else{
+        navigate('/login')
+      }
+    })
+}
 
   return (
     <div>
@@ -36,7 +60,7 @@ export default function Livro() {
         {paginas}
         {quantidade}
         <img src={imagem}></img>
-      
+        <button onClick={()=>compra()}>Comprar</button>
     </div>
   )
 }

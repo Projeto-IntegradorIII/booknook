@@ -76,7 +76,7 @@ app.get('/paginaLivro/:isbn', (req, res) => {
 
 app.get('/', (require, response) =>{
     if(require.session.username){
-        return response.json({valid:true, username: require.session.username})
+        return response.json({valid:true, username: require.session.username, cpf:require.session.cpf})
     }else{
         return response.json({valid:false})
     }

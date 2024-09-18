@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Menu from '../components/Menu';
+import '../styles/CadastroLivros.css'
 
 
 export default function CadastroLivros() {
@@ -44,82 +45,104 @@ export default function CadastroLivros() {
 
 
   return (
-    <div>
-        <Menu/>
-      <div >
-      <div >
-        <form onSubmit={handleSubmit}>
-          <div >
-            <h1>booknook :)</h1>
 
-            <label htmlFor="titulo">Titulo</label>
-            <input
-              type="name"
-              placeholder="Insira o título"
-              onChange={(e) => setTitulo(e.target.value)}
-            />
 
-            <label htmlFor="autor">Autor</label>
-            <input
-              type="name"
-              placeholder="Insira o autor"
-              onChange={(e) => setAutor(e.target.value)}
-            />
+    <div className='body-cadastro-livro' >
+    <Menu/>
+    <div className="form-container">
+<form onSubmit={handleSubmit}>
+<h1 className='titulo-cadastro-livro'>Olá, vamos cadastrar seu livro?</h1>
 
-            <label htmlFor="editora">Editora</label>
-            <input
-              type="text"
-              placeholder="Insira a editora"
-              onChange={(e) => setEditora(e.target.value)}
-            />
 
-            <label htmlFor="preco">Preço</label>
-            <input
-              type="number"
-              placeholder="Insira seu número de celular"
-              onChange={(e) => setPreco(parseFloat(e.target.value))}
-            />
-          </div>
 
-          <div>
-            <label htmlFor="quantidade">Quantidade</label>
-            <input
-              type="number"
-              step="1"
-              placeholder="Insira a quantidade"
-              onChange={(e) => setQuantidade(e.target.value)}
-            />
-          </div>
 
-          <div>
-            <label htmlFor="paginas">Nº de páginas</label>
-            <input
-              type="number"
-              placeholder="Insira a quantidade de páginas"
-              onChange={(e) => setPaginas(e.target.value)}
-            />
-          </div>
-          <div>
-            <label htmlFor="isbn">ISBN</label>
-            <input
-              type="text"
-              placeholder="Insira o ISBN"
-              onChange={(e) => setISBN(e.target.value)}
-            />
-          </div>
+<label htmlFor="titulo" className="custom-label-titulo">Título</label>
+<input
+  type="name"
+  placeholder="Insira o título"
+  onChange={(e) => setTitulo(e.target.value)}
+  className="custom-input-titulo"
+/>
 
-          <div>
-            <label htmlFor="imagem">Imagem</label>
-            <input
-              type="text"
-              placeholder="Insira o link da foto"
-              onChange={(e) => setImagem(e.target.value)}
-            />
-          </div>
-          <button>Salvar</button>
-        </form>
+
+
+
+<label htmlFor="autor" className="custom-label-autor">Autor</label>
+<input
+  type="name"
+  placeholder="Insira o autor"
+  onChange={(e) => setAutor(e.target.value)}
+  className="custom-input-autor"
+/>
+
+
+
+
+<label htmlFor="editora" className="custom-label-editora">Editora</label>
+<input
+  type="text"
+  placeholder="Insira a editora"
+  onChange={(e) => setEditora(e.target.value)}
+  className="custom-input-editora"
+/>
+
+
+
+
+
+
+<label htmlFor="preco" className="custom-label-preco">Preço</label>
+<input
+  type="number"
+  placeholder="Insira o preço"
+  onChange={(e) => setPreco(parseFloat(e.target.value))}
+  className="custom-input-preco"
+/>
+
+
+
+
+<label htmlFor="quantidade" className="custom-label-qnt">Quantidade</label>
+<input
+  type="number"
+  step="1"
+  placeholder="Insira a quantidade"
+  onChange={(e) => setQuantidade(e.target.value)}
+  className="custom-input-qnt"
+/>
+
+
+
+
+<label htmlFor="isbn" className="custom-label-isbn">ISBN</label>
+<input
+  type="text"
+  placeholder="Insira o ISBN"
+  onChange={(e) => setISBN(e.target.value)}
+  className="custom-input-isbn"
+/>
+
+
+<div>
+        <label htmlFor="imagem" className='custom-label-img '>Imagem</label>
+        <input
+          type="text"
+          placeholder="Insira o link da foto"
+          onChange={(e) => setImagem(e.target.value)}
+          className="custom-input-isbn"
+        />
       </div>
-    </div>
-    </div>
+
+
+<button className="bnt-cadastro">Salvar</button>
+</form>
+
+
+<div className="image-container">
+<img src="https://img.freepik.com/psd-premium/uma-estatueta-de-uma-menina-lendo-um-livro-com-uma-vela-no-fundo_1217673-299898.jpg?w=740" alt="Imagem do Livro" className="custom-image" />
+</div>
+</div>
+</div>
+
   )
 }

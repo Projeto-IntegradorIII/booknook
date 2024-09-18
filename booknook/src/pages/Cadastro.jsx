@@ -5,7 +5,6 @@ import "../styles/Cadastro.css";
 
 
 
-
 export default function Cadastro() {
 
   const navigate = useNavigate();
@@ -28,17 +27,19 @@ export default function Cadastro() {
       .catch((err) => console.log(err));
   }
   return (
-    <div className="login-container">
-      <div className="login-form-container">
+    <div className="criar-conta-container">
+      <div className="criar-conta-box">
+      <div className="criar-conta-form-container">
         <form onSubmit={handleSubmit}>
-          <div className="login-form-group">
-            <h1>booknook :)</h1>
+          <div className="cadastro-form-group">
+          <h1 className="criar-conta-titulo">Crie sua conta!</h1>
+          <h2>Dados pessoais</h2>
 
             <label htmlFor="nome">Nome</label>
             <input
               type="name"
               placeholder="Insira seu nome"
-              className="login-input"
+               className="cadastro-input"
               onChange={(e) => setNome(e.target.value)}
             />
 
@@ -46,7 +47,7 @@ export default function Cadastro() {
             <input
               type="email"
               placeholder="Insira seu email"
-              className="login-input"
+               className="cadastro-input"
               onChange={(e) => setEmail(e.target.value)}
             />
 
@@ -54,7 +55,7 @@ export default function Cadastro() {
             <input
               type="text"
               placeholder="Insira seu CPF"
-              className="login-input"
+               className="cadastro-input"
               onChange={(e) => setCpf(e.target.value)}
             />
 
@@ -62,7 +63,7 @@ export default function Cadastro() {
             <input
               type="tel"
               placeholder="Insira seu número de celular"
-              className="login-input"
+              className="cadastro-input"
               onChange={(e) => setTelefone(e.target.value)}
             />
           </div>
@@ -72,15 +73,23 @@ export default function Cadastro() {
             <input
               type="password"
               placeholder="Insira sua senha"
-              className="login-input"
+              className="cadastro-input"
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
+
           <button className="login-button">Salvar</button>
-        </form>
-        <a href='/login'>
-          Entre
-        </a>
+      </form>
+      <div className="inline-links">
+            <a className="no-cadastro">Já possui uma conta?</a>
+            <a href='/login' className="cadastro">Faça Login</a>
+         </div>
+    </div>
+
+    <div className="cadastro-image-side">
+      <img src="https://scontent.frec10-1.fna.fbcdn.net/v/t39.30808-6/459999956_3194438247353728_862671319540510508_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=9PbDwDRbhm8Q7kNvgHHZJC7&_nc_ht=scontent.frec10-1.fna&_nc_gid=AJRA7WbKAQIGMN9vFclo6ok&oh=00_AYDIhnCTefUU8NM8nzv91CZta21ds7gWXHHI6rGRmN4RSQ&oe=66F0E318" alt="Login illustration" />
+    </div>
+
       </div>
     </div>
   );

@@ -194,7 +194,7 @@ app.post('/cadastroLivros', (request, response)=>{
     request.body.preco,
     request.body.paginas, 
     request.body.quantidade, 
-    request.body.imagem
+    request.body.imagem,
   ], (err, data)=>{
     if(err) return response.json("erro");
     if(data.affectedRows > 0){

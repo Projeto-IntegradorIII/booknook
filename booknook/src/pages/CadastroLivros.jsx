@@ -18,6 +18,7 @@ export default function CadastroLivros() {
 
   function handleSubmit(event) {
     event.preventDefault();
+    axios.defaults.withCredentials = true;
     axios
       .post("http://localhost:8082/cadastroLivros", { titulo, isbn, autor, editora, preco, paginas, quantidade, imagem })
       .then((response) => {
@@ -52,10 +53,6 @@ export default function CadastroLivros() {
       <div className="form-container">
         <form onSubmit={handleSubmit}>
           <h1 className='titulo-cadastro-livro'>Olá, vamos cadastrar seu livro?</h1>
-
-
-
-
           <label htmlFor="titulo" className="custom-label-titulo">Título</label>
           <input
             type="name"
@@ -63,9 +60,6 @@ export default function CadastroLivros() {
             onChange={(e) => setTitulo(e.target.value)}
             className="custom-input-titulo"
           />
-
-
-
 
           <label htmlFor="autor" className="custom-label-autor">Autor</label>
           <input
@@ -87,6 +81,13 @@ export default function CadastroLivros() {
           />
 
 
+<label htmlFor="paginas" className="custom-label-editora">Páginas</label>
+          <input
+            type="number"
+            placeholder="Insira a quantidade de páginas"
+            onChange={(e) => setPaginas(e.target.value)}
+            className="custom-input-editora"
+          />
 
 
 
@@ -94,6 +95,7 @@ export default function CadastroLivros() {
           <label htmlFor="preco" className="custom-label-preco">Preço</label>
           <input
             type="number"
+            step="any"
             placeholder="Insira o preço"
             onChange={(e) => setPreco(parseFloat(e.target.value))}
             className="custom-input-preco"

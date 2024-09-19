@@ -128,34 +128,32 @@ import Menu from '../components/Menu';
           </form>
         </div>
        
-
-        <div className='seuslivros'>
-          <h1 id='titulo2'>Seus livros</h1>
-          <ul>
+        <div className="lista-div">
+      <h2 className="textoGrande">
+        <span>Seus Livros</span>
+      </h2>
+      <div className="listaLivros">
+          <div className="content">
+          <ul className="lista-Ul">
             {livros.length > 0 ? (
               livros.map((livro, index) => (
-                <li key={index} className='listalivros'>
-                  <h3>{livro.titulo}</h3>
-                  <p>Autor: {livro.autor}</p>
-                  <p>ISBN: {livro.isbn}</p>
-                  <p>Editora: {livro.editora}</p>
-                  <p>Preço: {livro.preco}</p>
-                  <p>Páginas: {livro.paginas}</p>
-                  <p>Quantidade: {livro.quantidade}</p>
-                  <p>Capa: <img className="vetorImg" src={livro.imagem} alt="" /></p>
-                  
-                <p>  <button onClick={()=>excluirLivro(livro.isbn)} className='bntexcluir'>Excluir</button></p>
+                <li key={index}>
+                  <img src={livro.imagem} alt=""  id="capa"/>
+                  <p id="unidade">{livro.quantidade} unid.</p>
+                  <h3 id="titulo">{livro.titulo}</h3>
+                  <p id="intrinseca">Intrínseca: {livro.editora}</p>
+                  <p id="preco"> R$ {livro.preco} </p>
+                  <button className="button-Comprar" onClick={()=>{excluirLivro(livro.isbn)}}>Excluir</button>
                 </li>
-                
               ))
             ) : (
               <p>Você ainda não cadastrou livros.</p>
             )}
           </ul>
-          
+          </div>
         </div>
-        
-      </div>
+     </div>
+     </div>
       </div>
     );
   }

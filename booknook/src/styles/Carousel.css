@@ -1,20 +1,34 @@
-
 .carousel-container {
   width: 100%;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2rem 0px;
+  margin: 3rem 0; 
+  position: relative;
 }
-  
+
+.carousel-slider {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  width: 80%; 
+  max-width: 1000px; 
+}
+
 .carousel-item {
-  max-width: 80%;
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .carousel-item img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+  width: 100%;
+  height: 100%; /* Imagem ocupa toda a altura */
+  max-height: 400px;
+  object-fit: cover; /* Faz com que a imagem cubra o contêiner, criando o efeito de zoom */
+  transition: transform 0.5s ease; /* Suaviza a transição de zoom */
 }
-  
+
+.carousel-item img:hover {
+  transform: scale(1.01); 
+}

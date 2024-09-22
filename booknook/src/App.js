@@ -5,6 +5,7 @@ import Cadastro from './pages/Cadastro';
 import Perfil from './pages/Perfil';
 import CadastroLivros from './pages/CadastroLivros';
 import PaginaLivro from './pages/PaginaLivro';
+import Pagamento from './pages/Pagamento';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/' element={<Home/>}/> 
         <Route path='/cadastro-livros' element={<CadastroLivros/>}/> 
         <Route path='/paginaLivro/:isbn' element={<PaginaLivro/>}/>
+        <Route path='/pagamento' element={<Pagamento/>}/>
       </Routes>
     </BrowserRouter>
   );

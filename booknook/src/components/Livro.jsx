@@ -44,7 +44,7 @@ export default function Livro() {
               if (livros.length > 0) {
                 window.alert('Você é proprietário do livro')
               } else {
-                navigate('/')
+                navigate('/pagamento')
               }
             })
         } else {

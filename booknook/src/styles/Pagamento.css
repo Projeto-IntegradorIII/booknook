@@ -1,0 +1,40 @@
+.pagamento-container {
+    margin-top: 100px;
+    margin-left: 500px;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #ffffff;
+  }
+  
+  .endereco, .metodo-pagamento, .valor-livro {
+    margin-bottom: 20px;
+  }
+  
+  .titulo-pagamento {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .valor-livro {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .btn-finalizar {
+    width: 100%;
+    padding: 10px;
+    background-color: #8C52FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+  }
+  

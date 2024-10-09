@@ -26,4 +26,8 @@ A aplicação foi desenvolvida utilizando um stack **MERN** com banco de dados r
 git clone <URL_DO_REPOSITORIO>
 
 ```
+## Apicação funcionando:
+<hr>
 <img src="https://media.licdn.com/dms/image/v2/D4D2DAQEY0N-185xt0A/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1728434489474?e=1729040400&v=beta&t=lg-EJBtsLwUUMimz2Hopdv6aMFjjJkl5zrXuzj-5qV8">
+<img src="https://media.licdn.com/dms/image/v2/D4D2DAQFBTa5S3YwePA/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1728434501584?e=1729040400&v=beta&t=iI3OMIo84Dh0_0UCOgD06h-PORVlzp2ndly9BGAh2y4">
+<img src="https://media.licdn.com/dms/image/v2/D4D2DAQG3LIv3rNRMwQ/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1728434516755?e=1729040400&v=beta&t=YaS6rFzg8W61qwZtWwn4xvh99vKGZbx6BgOkUnULSXI">

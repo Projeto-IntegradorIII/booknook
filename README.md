@@ -24,3 +24,6 @@ A aplicação foi desenvolvida utilizando um stack **MERN** com banco de dados r
 
 ```bash
 git clone <URL_DO_REPOSITORIO>
+
+```
+https://media.licdn.com/dms/image/v2/D4D2DAQEY0N-185xt0A/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1728434489474?e=1729040400&v=beta&t=lg-EJBtsLwUUMimz2Hopdv6aMFjjJkl5zrXuzj-5qV8
